@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20171206183923) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.boolean "has_lights"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "matches", force: :cascade do |t|
     t.integer "user1_id"
     t.integer "user2_id"
