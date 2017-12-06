@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'publics/home'
+  get 'publics/profile'
 
   get 'publics/about'
 
