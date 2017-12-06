@@ -1,5 +1,5 @@
 import Home from 'pages/home'
-import Nav from 'pages/nav'
+import NavBar from 'components/nav'
 import WebpackerReact from 'webpacker-react';
 
-WebpackerReact.setup({Home, Nav})
+WebpackerReact.setup({Home, NavBar})
