@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20171206214913) do
   enable_extension "plpgsql"
 
   create_table "matches", force: :cascade do |t|
-    t.integer "user1_id"
     t.integer "user2_id"
     t.string "location"
     t.datetime "timeslot"
