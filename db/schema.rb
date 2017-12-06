@@ -43,4 +43,5 @@ ActiveRecord::Schema.define(version: 20171206214913) do
   end
 
   add_foreign_key "matches", "users"
+
 end

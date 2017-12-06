@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+#user_profile {
+  /*display: flex;
+  flex-flow: row wrap;s
+  text-align: center;*/
+  clear: both;
+  content: "";
+  display: table, block;
+  clear: both;
+}
+#user_info {
+
+}
+
+#user_data {
+  /*flex: 1 100%;*/
+  float: left;
+  margin-left: 200px;
+}
+img {
+  height: 200px;
+  width: 200px;
+  float: left;
+  /*margin-left: 10px;*/
+}
