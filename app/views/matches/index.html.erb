@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>User1</th>
+      <th>User</th>
       <th>User2</th>
       <th>Location</th>
       <th>Timeslot</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @matches.each do |match| %>
       <tr>
-        <td><%= match.user1_id %></td>
+        <td><%= match.user_id %></td>
         <td><%= match.user2_id %></td>
         <td><%= match.location %></td>
         <td><%= match.timeslot %></td>
@@ -31,3 +31,6 @@
 <br>
 
 <%= link_to 'New Match', new_match_path %>
+
+<br />
+User ID: <%= current_user.id %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'publics/home'
   get 'publics/profile'
 
@@ -6,4 +7,5 @@ Rails.application.routes.draw do
 
   resources :matches
   root 'publics#home'
+  get '/matches' => 'matches#index'
 end
