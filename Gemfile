@@ -21,11 +21,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-<<<<<<< HEAD
+
 gem 'react-bootstrap-rails'
-=======
+
 gem 'devise'
->>>>>>> 550ba006aabcf7458fda63c9570e0c7e8f615def
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
