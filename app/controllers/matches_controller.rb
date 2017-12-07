@@ -63,6 +63,9 @@ class MatchesController < ApplicationController
   end
 
   def map
+   @google_api_key = 'AIzaSyCsAS0jtTVddtNAwYcrfDhPZziN6F620jA'
+   @map_center = [32.7096298,-117.1602029]
+   @map_zoom = 15
   end
 
   private

@@ -1,13 +1,19 @@
 import React from 'react';
 import GoogleMap from 'google-map-react';
+import Pin from './pin.js'
 export default class Map extends React.Component {
   render() {
     return (
       <div style={{width: '80%', height: '700px'}}>
         <GoogleMap
-          bootstrapURLKeys={{key: 'AIzaSyCsAS0jtTVddtNAwYcrfDhPZziN6F620jA'}}
-          center={[32.7096298,-117.1602029]}
-          zoom={18}>
+          bootstrapURLKeys={{key: this.props.googleApiKey}}
+          center={this.props.center}
+          zoom={this.props.zoom}
+        >
+        {this.props.pins.map((pinProps)=>{
+          console.log(pinProps);
+          return <Pin key={pinProps.title} {...pinProps} />
+        })}
         </GoogleMap>
       </div>
     )
