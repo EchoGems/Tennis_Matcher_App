@@ -1,5 +1,6 @@
 import Home from 'pages/home'
-import Profile from 'pages/profile'
+import NavBar from 'components/nav'
 import WebpackerReact from 'webpacker-react';
+import Profile from 'pages/profile'
 
-WebpackerReact.setup({Home, Profile})
+WebpackerReact.setup({Home, NavBar, Profile})

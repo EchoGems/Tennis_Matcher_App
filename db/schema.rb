@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20171206183923) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+
   create_table "matches", force: :cascade do |t|
     t.integer "user1_id"
     t.integer "user2_id"
