@@ -18,7 +18,9 @@ export default class Profile extends Component {
                   <br/>
                 </div>
               </div>
-              <h2>Select your availability</h2>
+                <div id="availability">
+                  <h2>Select your availability</h2>
+                </div>
             </div>
 
 

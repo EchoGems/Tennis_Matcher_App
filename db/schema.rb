@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20171206214913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-
   create_table "matches", force: :cascade do |t|
     t.integer "user2_id"
     t.string "location"
@@ -44,5 +43,4 @@ ActiveRecord::Schema.define(version: 20171206214913) do
   end
 
   add_foreign_key "matches", "users"
-
 end

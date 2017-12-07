@@ -22,18 +22,22 @@
   display: table, block;
   clear: both;
 }
-#user_info {
-
+#availability {
+  clear: both;
+  /*margin-top: 100px;*/
 }
 
 #user_data {
   /*flex: 1 100%;*/
   float: left;
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-top: 40px;
 }
 img {
   height: 200px;
   width: 200px;
   float: left;
+  margin-bottom: 40px;
+  margin-top: 40px;
   /*margin-left: 10px;*/
 }
