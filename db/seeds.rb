@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Location.destroy_all
+
+Location.create([
+  {
+    name: "Balboa Tennis Club",
+    address: "2221 Morley Field, San Diego, CA",
+    zip: "92104",
+    lat: 32.740122,
+    lng: -117.141197
+  },
+  {
+    name: "Miramar College Tennis Courts",
+    address: "10440 Black Mountain Rd, San Diego, CA",
+    zip: "92126",
+    lat: 32.907676,
+    lng: -117.120020
+  }
+  ])
+
+
+  # {
+  #   name: "",
+  #   address: "",
+  #   zip: "",
+  #   lat: "",
+  #   lng: ""
+  # }

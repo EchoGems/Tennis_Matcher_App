@@ -11,8 +11,7 @@ export default class Map extends React.Component {
           zoom={this.props.zoom}
         >
         {this.props.pins.map((pinProps)=>{
-          console.log(pinProps);
-          return <Pin key={pinProps.title} {...pinProps} />
+          return <Pin key={pinProps.name} {...pinProps} />
         })}
         </GoogleMap>
       </div>
