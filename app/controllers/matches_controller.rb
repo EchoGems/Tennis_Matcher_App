@@ -62,6 +62,13 @@ class MatchesController < ApplicationController
     end
   end
 
+  def map
+   @google_api_key = 'AIzaSyCsAS0jtTVddtNAwYcrfDhPZziN6F620jA'
+   @map_center = [32.764212, -117.162570]
+   @map_zoom = 11
+   @locations = Location.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_match

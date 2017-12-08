@@ -2,6 +2,7 @@ import Home from 'pages/home'
 import NavBar from 'components/nav'
 import WebpackerReact from 'webpacker-react';
 import Profile from 'pages/profile'
+import Map from 'components/Map'
 import About from 'pages/about'
 
-WebpackerReact.setup({Home, NavBar, Profile, About})
+WebpackerReact.setup({Home, NavBar, Profile, About, Map})

@@ -15,6 +15,16 @@ ActiveRecord::Schema.define(version: 20171207220829) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "zip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "lat"
+    t.float "lng"
+  end
+
   create_table "matches", force: :cascade do |t|
     t.integer "user2_id"
     t.string "location"

@@ -6,13 +6,14 @@
     "babel-preset-react": "^6.24.1",
     "coffeescript": "1.12.7",
     "google-auth-library": "^0.12.0",
+    "google-map-react": "^0.25.0",
     "googleapis": "^23.0.0",
     "history": "^1.17.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
-    "react-router": "^4.2.0",
+    "react-icons": "^2.2.7",
     "webpacker-react": "^0.3.2"
   },
   "devDependencies": {

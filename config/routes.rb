@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'publics/profile'
 
   get 'publics/about'
-
   resources :matches
   root 'publics#home'
   get '/matches' => 'matches#index'
+  get '/map' => 'matches#map'
 end
