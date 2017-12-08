@@ -6,23 +6,23 @@
       <p><strong>First Name:</strong> <%=current_user.first_name%></p>
       <p><strong>Last Name:</strong> <%=current_user.last_name%></p>
       <p><strong>Email:</strong> <%=current_user.email%></p>
-      <p><strong>Skill Level:</strong>
+      <p><strong>Skill Level:</strong> <%=current_user.skill_level%></p>
+      <form action="/update" method="post">
         <div class="form-group">
-          <select class="custom-select">
+          <select name= "skill_level" class="custom-select">
             <option selected="">Skill Level</option>
-            <option value="1">Beginner</option>
-            <option value="2">Intermediate</option>
-            <option value="3">Advanced</option>
+            <option name= "skill_level" value="Beginner">Beginner</option>
+            <option name= "skill_level" value="Intermediate">Intermediate</option>
+            <option name= "skill_level" value="Advanced">Advanced</option>
           </select>
-         </div>
-      </p>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
       <br/>
       <br/>
     </div>
   </div>
-    <div id="availability">
-      <h2>Select your availability</h2>
-    </div>
-
-
+  <div id="availability">
+    <h2>Select your availability</h2>
+  </div>
 </div>
