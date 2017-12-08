@@ -1,26 +1,11 @@
 <div id="user_profile">
   <h1>My Profile</h1>
   <div id="user_info">
-    <%= link_to image_tag(@user.image.url(:large)), @user.image.url %>
+    <%= link_to image_tag(current_user.image.url(:large)), current_user.image.url %>
     <div id="user_data">
       <p><strong>First Name:</strong> <%=current_user.first_name%></p>
       <p><strong>Last Name:</strong> <%=current_user.last_name%></p>
       <p><strong>Email:</strong> <%=current_user.email%></p>
-<<<<<<< HEAD
-      <p><strong>Skill Level:</strong>
-
-      <form class="" action="index.html" method="post">
-          <div class="form-group">
-            <select class="custom-select">
-              <option selected="">Skill Level</option>
-              <option value="1">Beginner</option>
-              <option value="2">Intermediate</option>
-              <option value="3">Advanced</option>
-            </select>
-           </div>
-      </form>
-      </p>
-=======
       <p><strong>Skill Level:</strong> <%=current_user.skill_level%></p>
       <form action="/update" method="post">
         <div class="form-group">
@@ -30,10 +15,10 @@
             <option name= "skill_level" value="Intermediate">Intermediate</option>
             <option name= "skill_level" value="Advanced">Advanced</option>
           </select>
+
           <input type="submit" value="Submit">
         </div>
       </form>
->>>>>>> 076650e6b17c58462f805c569b8abeaad84f2ff4
       <br/>
       <br/>
     </div>
