@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root 'publics#home'
   get '/matches' => 'matches#index'
   get '/map' => 'matches#map'
+  get '/calendar' => 'matches#calendar'
 end

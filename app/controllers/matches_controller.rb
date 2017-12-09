@@ -8,6 +8,7 @@ class MatchesController < ApplicationController
     @matches = Match.all
   end
 
+
   # GET /matches/1
   # GET /matches/1.json
   def show
@@ -62,11 +63,18 @@ class MatchesController < ApplicationController
     end
   end
 
+
+# may need to move map method into user controller once that is functional
   def map
-   @google_api_key = 'AIzaSyCsAS0jtTVddtNAwYcrfDhPZziN6F620jA'
+   @google_maps_api_key = 'AIzaSyDG-FI4XyQIQBTLN9bpyYXM2Yrct-J9l70'
    @map_center = [32.764212, -117.162570]
    @map_zoom = 11
    @locations = Location.all
+  end
+
+  def calendar
+    # @google_calendar_api_key = AIzaSyBSno_sbyVqfPbqeTXKkFJZco9v3v9j56Y
+    #calendar id echogems2017@gmail.com
   end
 
   private
