@@ -10,11 +10,19 @@ export default class Home extends Component {
     render() {
         return (
             <div className={"admin"}>
-              <Jumbotron>
-                <h1>It starts with LOVE</h1>
-                <p>You can use this app to find a local tennis player in San Diego and set up a date, time, and place to play!</p>
-                <p><Button bsStyle="primary">Learn more</Button></p>
-              </Jumbotron>
+              <div className="jumbotron jumbotron-billboard">
+                <div className="img"></div>
+                  <div className="container">
+                      <div className="row">
+                          <div className="col-lg-12">
+                            <br />
+                            <h1>It starts with LOVE</h1>
+                              <p>Find fellow SD tennis players in San Diego and set up a time and place to play!</p>
+                              <a href="publics/about" className="btn btn-info">Learn More </a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
               <Carousel>
                 <Carousel.Item>
                   <img width={900} height={500} alt="900x500" src="/assets/Serena.jpg" />
