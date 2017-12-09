@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Nav, Navbar, NavItem, NavDropdown, Collapse, Brand, Toggle, Header, MenuItem} from 'react-bootstrap'
 
-export default class NavBar extends Component {
+export default class NavBar_signed_in extends Component {
 
     render() {
         return (
@@ -25,8 +25,7 @@ export default class NavBar extends Component {
                 </NavDropdown>
               </Nav>
               <Nav pullRight>
-                  <a className="nav-link" href="/users/sign_in">Sign In</a>
-                  <a className="nav-link" href="/users/sign_up">Sign Up</a>
+                  <a className="nav-link" href="/users/sign_out" data-method="delete">Sign Out</a>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

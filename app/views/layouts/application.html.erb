@@ -11,7 +11,11 @@
   </head>
 
   <body>
-    <%= react_component('NavBar')%>
+    <% if user_signed_in? %>
+      <%= react_component('NavBar_signed_in')%>
+    <% else %>
+      <%=  react_component('NavBar') %>
+    <%end%>
     <%= yield %>
   </body>
 </html>
