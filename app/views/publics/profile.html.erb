@@ -7,7 +7,7 @@
       <p><strong>Last Name:</strong> <%=current_user.last_name%></p>
       <p><strong>Email:</strong> <%=current_user.email%></p>
       <p><strong>Skill Level:</strong> <%=current_user.skill_level%></p>
-      <form action="/update" method="post">
+      <form action="/update" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <select name= "skill_level" class="custom-select">
             <option selected="">Skill Level</option>
@@ -15,7 +15,7 @@
             <option name= "skill_level" value="Intermediate">Intermediate</option>
             <option name= "skill_level" value="Advanced">Advanced</option>
           </select>
-
+          <input type="file" name="image" accept="image/*">
           <input type="submit" value="Submit">
         </div>
       </form>
