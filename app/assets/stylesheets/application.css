@@ -59,18 +59,37 @@ img {
 .jumbotron h2 {margin-top:0;}
 .jumbotron {
   position:relative;
-  padding-top:50px;
+  padding-top: 0px;
+  margin-top: 0px;
   padding-bottom:50px;
 }
 .jumbotron .container {
-  height: 250px;
+  height: 65vh;
   position:relative;
   z-index:2;
 }
 
 @media screen and (max-width: 768px) {
   .jumbotron {
-    padding-top:20px;
+    padding-top: 0px;
     padding-bottom:20px;
   }
+}
+
+.card {
+  max-width: 40rem;
+  background-image: url("https://images.unsplash.com/photo-1511968410596-41f6437a0bbe?auto=format&fit=crop&w=967&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+#home-page-cards {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: auto;
+}
+.col-lg-12 {
+  justify-content: center;
 }
