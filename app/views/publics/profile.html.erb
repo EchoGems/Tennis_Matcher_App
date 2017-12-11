@@ -15,8 +15,9 @@
             <option name= "skill_level" value="Intermediate">Intermediate</option>
             <option name= "skill_level" value="Advanced">Advanced</option>
           </select>
-          <input type="file" name="image" accept="image/*">
           <input type="submit" value="Submit">
+          <p>Select your profile picture</p>
+          <input type="file" name="image" accept="image/*">
         </div>
       </form>
       <br/>
@@ -24,6 +25,6 @@
     </div>
   </div>
   <div id="availability">
-    <h2>Select your availability</h2>
+    <h3><%= link_to "Let's play!", new_match_path %></h3>
   </div>
 </div>
