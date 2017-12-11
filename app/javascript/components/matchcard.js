@@ -1,25 +1,28 @@
 import React, { Component } from 'react'
 
 export default class MatchCard extends Component {
-  // constructor(props){
-  //   super(props)
-  //   this.state = {
-  //     match: {
-  //       user2_id: this.props.user2_id,
-  //       location: this.props.location,
-  //       timeslot: this.props.timeslot,
-  //       user_id: this.props.user_id,
-  //       id: this.props.id
-  //     }
-  //   }
-  // }
+
   render(){
+    var edit
+    var destroy
+    if (this.props.current_user == this.props.user_id) {
+      edit = (<a href={"/matches/" + this.props.user_id + "/edit"}>Edit</a>)
+    }
+    if (this.props.current_user == this.props.user_id) {
+      destroy = (<a data-confirm="Are you sure you want to delete this appointment?" href={"/matches/" + this.props.user_id} data-method="delete">Delete</a>)
+    }
     return (
       <div>
-        test
         <p>
-          id: {this.props.id}, timeslot: {this.props.timeslot}, location: {this.props.location}, user_id: {this.props.user_id}, user2_id: {this.props.user2_id}
+          Match time: {this.props.timeslot} <br /> Location: {this.props.location} <br /> user_id: {this.props.user_id} <br /> user2_id: {this.props.user2_id}
         </p>
+        <span id={"edit"}>
+          {edit} &nbsp;
+        </span>
+
+        <span id ={"destroy"}>
+          {destroy}
+        </span>
       </div>
     )
   }
