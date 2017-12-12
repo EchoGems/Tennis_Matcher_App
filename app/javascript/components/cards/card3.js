@@ -4,16 +4,20 @@ import {Nav, Navbar, NavItem, NavDropdown, Collapse, Brand, Toggle, Header, Menu
 export default class Card3 extends Component {
 
     render() {
+      var divStyle = {
+        width: "40rem",
+        height: "25rem",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPositionY:"bottom",
+        backgroundPositionX: "center",
+        backgroundImage: 'url("https://images.unsplash.com/37/tEREUy1vSfuSu8LzTop3_IMG_2538.jpg?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D")'
+      }
         return (
-          <div id="card-3"className="card text-white bg-info mb-3">
-            <div>
-              // <img className="card-img" src="https://images.unsplash.com/photo-1511968410596-41f6437a0bbe?auto=format&fit=crop&w=967&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Card image"/>
-              <div className="card-img-overlay">
-                <div className="card-body">
-                  <h4 className="card-title">Schedule a Match!</h4>
-                  <p className="card-text">Schedule your match and be prepared to play!</p>
-                </div>
-              </div>
+          <div style={divStyle} id="card-1"className="card text-white bg-info mb-3">
+            <div className="card-content">
+              <h4 className="card-title">Schedule a Match!</h4>
+              <p className="card-text">Schedule your match and get prepared to play!</p>
             </div>
           </div>
       )
