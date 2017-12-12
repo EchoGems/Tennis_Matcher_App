@@ -3,6 +3,11 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Router, Route} from 'react-router';
 import {Jumbotron, Button, Carousel, Item, Caption} from 'react-bootstrap'
+import Card from 'components/cards/card.js'
+import Card2 from 'components/cards/card2.js'
+import Card3 from 'components/cards/card3.js'
+
+
 
 
 export default class Home extends Component {
@@ -17,35 +22,17 @@ export default class Home extends Component {
                           <div className="col-lg-12">
                             <br />
                             <h1>It starts with LOVE</h1>
-                              <p>Find fellow SD tennis players in San Diego and set up a time and place to play!</p>
+                              <p>Find fellow tennis players in San Diego and set up a time and place to play!</p>
                               <a href="publics/about" className="btn btn-info">Learn More </a>
                           </div>
                       </div>
                   </div>
                 </div>
-              <Carousel>
-                <Carousel.Item>
-                  <img width={900} height={500} alt="900x500" src="/assets/Serena.jpg" />
-                  <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img width={900} height={500} alt="900x500" src="/assets/nadal.jpg" />
-                  <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img width={900} height={500} alt="900x500" src="/assets/maria.jpeg" />
-                  <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              </Carousel>
+              <div id="home-page-cards">
+                <Card />
+                <Card2 />
+                <Card3 />
+              </div>
             </div>
         )
     }
