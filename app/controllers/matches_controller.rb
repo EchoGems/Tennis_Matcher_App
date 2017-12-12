@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-  before_action :set_match, only: [:show, :edit, :update, :destroy]
+  before_action :set_match, only: [:show, :edit, :update, :destroy, :join]
   before_action :authenticate_user!, except: [:destroy]
   # before_action :set_user_info, only: [:show]
 
@@ -9,8 +9,12 @@ class MatchesController < ApplicationController
     @matches = Match.match_info
   end
 
-  # GET /matches/1
-  # GET /matches/1.json
+  def join
+    @match.update(user2_id: params[:user2_id])
+    @match.save
+    redirect_to 'index'
+  end
+
   def show
   end
 

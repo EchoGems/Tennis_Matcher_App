@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   get '/matches' => 'matches#index'
   get '/map' => 'matches#map'
   post 'update' => 'publics#update'
+  get 'join' => 'matches#join'
+  # put 'join' => 'matches#join'
+  # get 'join' => 'matches#join'
 end
