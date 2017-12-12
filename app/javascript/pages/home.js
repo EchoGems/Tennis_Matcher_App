@@ -33,6 +33,9 @@ export default class Home extends Component {
                 <Card2 />
                 <Card3 />
               </div>
+              <footer>
+                Created by @EchoGems2017
+              </footer>
             </div>
         )
     }
