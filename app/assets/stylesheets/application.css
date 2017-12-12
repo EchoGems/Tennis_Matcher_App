@@ -111,3 +111,10 @@ text-shadow: 2px 2px 0px black;
 .card-text {
   text-align: center;
 }
+.page_style{
+  margin-left:50px;
+}
+.sign-in-box {
+  border-style: solid black;
+  border-width:2px 2px 2px 2px;
+}
