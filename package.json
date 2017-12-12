@@ -10,12 +10,13 @@
     "googleapis": "^23.0.0",
     "history": "^1.17.0",
     "prop-types": "^15.6.0",
+    "radium": "^0.19.6",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
-    "webpacker-react": "^0.3.2",
-    "react-router": "^4.2.0"
+    "react-router": "^4.2.0",
+    "webpacker-react": "^0.3.2"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.9.5"
