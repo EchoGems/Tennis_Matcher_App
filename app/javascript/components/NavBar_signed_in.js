@@ -16,8 +16,8 @@ export default class NavBar_signed_in extends Component {
               <Nav>
                 <a className="nav-link" href="/">Home</a>
                 <a className="nav-link" href="/publics/about">About</a>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <MenuItem eventKey={3.1}>Action</MenuItem>
+                <NavDropdown title="Profile" id="basic-nav-dropdown">
+                  <MenuItem><a className="nav-link" href="/publics/profile">Profile Page</a></MenuItem>
                   <MenuItem eventKey={3.2}>Another action</MenuItem>
                   <MenuItem eventKey={3.3}>Something else here</MenuItem>
                   <MenuItem divider />
