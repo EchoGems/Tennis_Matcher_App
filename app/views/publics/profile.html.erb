@@ -7,7 +7,8 @@
       <p><strong>Last Name:</strong> <%=current_user.last_name%></p>
       <p><strong>Email:</strong> <%=current_user.email%></p>
       <p><strong>Skill Level:</strong> <%=current_user.skill_level%></p>
-      <form action="/update" method="post" enctype="multipart/form-data">
+
+      <form action="/update_skill" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <select name= "skill_level" class="custom-select">
             <option selected="">Skill Level</option>
@@ -15,11 +16,18 @@
             <option name= "skill_level" value="Intermediate">Intermediate</option>
             <option name= "skill_level" value="Advanced">Advanced</option>
           </select>
-          <input type="submit" value="Submit">
-          <p>Select your profile picture</p>
-          <input type="file" name="image" accept="image/*">
+          <input type="submit" value="Update Skill Level">
         </div>
       </form>
+
+      <form style="display:inline-block" action="/update_image" method="post" enctype="multipart/form-data">
+          <p>Select your profile picture</p>
+          <input type="file" name="image" accept="image/*">
+          <input type="submit" value="Update Picture">
+      </form>
+      <div>
+        <%= link_to "Edit/Cancel Account", edit_user_registration_path %>
+      </div>
       <br/>
       <br/>
     </div>
