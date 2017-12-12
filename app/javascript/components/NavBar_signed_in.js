@@ -33,7 +33,6 @@ export default class NavBar_signed_in extends Component {
             </div>
           </nav>
         </div>
-
       )
       }
     }
