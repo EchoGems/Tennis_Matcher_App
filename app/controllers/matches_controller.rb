@@ -1,11 +1,12 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:destroy]
+  # before_action :set_user_info, only: [:show]
 
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.all
+    @matches = Match.match_info
   end
 
   # GET /matches/1
@@ -74,6 +75,12 @@ class MatchesController < ApplicationController
     def set_match
       @match = Match.find(params[:id])
     end
+
+    # def set_user_info
+    #   @user1_first_name = User.find(@match.user_id).first_name
+    #   @user1_last_name = User.find(@match.user_id).last_name
+    # end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params

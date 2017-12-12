@@ -15,7 +15,7 @@ export default class MatchesIndex extends Component {
     var current_user = this.state.current_user
     var matches = this.state.matches.map(function(el, i){
       return (
-        <MatchCard key={i} current_user={current_user} id={el.id} location={el.location} timeslot={el.timeslot} user2_id={el.user2_id} user_id={el.user_id} />
+        <MatchCard key={i} current_user={current_user} user_name={el.user_name} id={el.id} location={el.location} timeslot={el.timeslot} user2_id={el.user2_id} user_id={el.user_id} />
       )
     })
 
@@ -25,6 +25,7 @@ export default class MatchesIndex extends Component {
         <div id = {"new"}>
           <a href="/matches/new">New match</a>
         </div>
+        <p>Current user ID: {this.state.current_user}</p>
       </div>
     )
   }
