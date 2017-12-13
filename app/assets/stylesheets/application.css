@@ -112,9 +112,24 @@ text-shadow: 2px 2px 0px black;
   text-align: center;
 }
 .page_style{
-  margin-left:50px;
+  background-image: url("https://images.unsplash.com/photo-1505232219783-f1b72c5880e4?auto=format&fit=crop&w=700&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  image-rendering: pixelated;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  height: 100vh;
+  overflow: hidden;
 }
 .sign-in-box {
-  border-style: solid black;
-  border-width:2px 2px 2px 2px;
+  text-align: center;
+  /*box-sizing: content-box;*/
+}
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
 }
