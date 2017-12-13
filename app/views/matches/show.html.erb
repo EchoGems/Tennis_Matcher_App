@@ -12,7 +12,7 @@
 
 <p>
   <strong>Location:</strong>
-  <%= @match.location %>
+  <%= @match.location.gsub!(/_/, ' ') %>
 </p>
 
 <p>

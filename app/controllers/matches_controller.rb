@@ -5,6 +5,11 @@ class MatchesController < ApplicationController
 
   # GET /matches
   # GET /matches.json
+
+  def show_locations
+    @locations = Location.all
+  end
+
   def index
     @matches = Match.match_info
   end
@@ -36,6 +41,7 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     @match = Match.new(match_params)
+    @locations = Location.all
 
     respond_to do |format|
       if @match.save
