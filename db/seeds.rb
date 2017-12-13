@@ -21,6 +21,14 @@ Location.create([
     zip: "92126",
     lat: 32.907676,
     lng: -117.120020
+  },
+
+  {
+    name: "Linda Vista Recreation Center",
+    address: "7064 Levant ST, San Diego, CA",
+    zip: "92111",
+    lat: 32.792214,
+    lng: -117.169947
   }
   ])
 
