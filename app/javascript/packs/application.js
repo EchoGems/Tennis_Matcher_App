@@ -5,6 +5,10 @@ import Profile from 'pages/profile'
 import Map from 'components/Map'
 import About from 'pages/about'
 import NavBar_signed_in from 'components/NavBar_signed_in'
+import Card from 'components/cards/card'
+import Card2 from 'components/cards/card2'
+import Card3 from 'components/cards/card3'
 import MatchesIndex from 'pages/matchesindex.js'
 
-WebpackerReact.setup({Home, NavBar, NavBar_signed_in, Profile, About, MatchesIndex, Map})
+WebpackerReact.setup({Home, NavBar, NavBar_signed_in, Profile, About, Map, Card, Card2, Card3, MatchesIndex})
+
