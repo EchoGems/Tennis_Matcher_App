@@ -25,7 +25,6 @@ export default class MatchesIndex extends Component {
         <div id = {"new"}>
           <a href="/matches/new">New match</a>
         </div>
-        <p>Current user ID: {this.state.current_user}</p>
       </div>
     )
   }

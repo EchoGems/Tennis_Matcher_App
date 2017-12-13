@@ -9,7 +9,17 @@ export default class MatchCard extends Component {
     var user2
     var user2_skill
     var user_skill
-
+    var date = this.props.timeslot.toString().slice(5, 7) + "/" + this.props.timeslot.toString().slice(8, 10) + "/" + this.props.timeslot.toString().slice(0, 4)
+    var timeHour = this.props.timeslot.toString().slice(11, 13)
+    var timeMin = this.props.timeslot.toString().slice(14, 16)
+    var ampm = "AM"
+    if (parseInt(timeHour) >= 12) {
+      ampm = "PM"}
+    if (parseInt(timeHour) > 12) {
+      timeHour = (parseInt(timeHour) - 12).toString()}
+    if (parseInt(timeHour) == 0 ) {
+      timeHour = "12"}
+    var time = timeHour + ":" + timeMin + " " + ampm
     if (this.props.user2_id) {
       user2_skill = this.props.user2_skill
     }
@@ -18,7 +28,6 @@ export default class MatchCard extends Component {
       user_skill = this.props.user_skill
     }
     if (!(this.props.user2_id) && this.props.user_id != this.props.current_user) {
-      // join = (<a href={"/matches/" + this.props.id + "/join/" + this.props.current_user}>Edit</a>)
       joinLeave = (
         <form action="join" method="get">
           <input type="hidden" name="user2_id" value={this.props.current_user}/>
@@ -51,7 +60,7 @@ export default class MatchCard extends Component {
     return (
       <div>
         <p>
-          Match time: {this.props.timeslot} <br /> Location: {this.props.location} <br /> Player 1: {this.props.user_name} <br />Skill level: {user_skill} <br /> Player 2: {user2}<br /> Skill level: {user2_skill}
+          Match date: {date} <br />Match time: {time} <br /> Location: {this.props.location} <br /> Player 1: {this.props.user_name} <br />Skill level: {user_skill} <br /> Player 2: {user2}<br /> Skill level: {user2_skill}
         </p>
         <span id={"edit"}>
           {edit} &nbsp;
