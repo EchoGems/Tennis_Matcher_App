@@ -20,7 +20,7 @@ export default class Pin extends React.Component {
     return(
       <div>
         {this.props.$hover &&
-          <div style={TooltipStyles}>{this.props.name}</div>
+          <div style={TooltipStyles}>{this.props.name.replace(/_/g, " ")}</div>
         }
         <div style={PinStyles}><MapPin /></div>
       </div>
