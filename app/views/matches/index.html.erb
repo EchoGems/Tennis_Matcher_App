@@ -1,36 +1,3 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Matches</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>User2</th>
-      <th>Location</th>
-      <th>Timeslot</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @matches.each do |match| %>
-      <tr>
-        <td><%= match.user_id %></td>
-        <td><%= match.user2_id %></td>
-        <td><%= match.location %></td>
-        <td><%= match.timeslot %></td>
-        <td><%= link_to 'Show', match %></td>
-        <td><%= link_to 'Edit', edit_match_path(match) %></td>
-        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Match', new_match_path %>
-
-<br />
-User ID: <%= current_user.id %>
+<%= react_component("MatchesIndex", {matches: @matches, current_user: current_user.id}) %>
