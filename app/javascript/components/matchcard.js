@@ -9,8 +9,13 @@ export default class MatchCard extends Component {
     var user2
     var user2_skill
     var user_skill
+
+    if (this.props.user2_id) {
+      user2_skill = this.props.user2_skill
+    }
+
     if (this.props.user_skill) {
-      user_skill = (<span><br />Skill level: {this.props.user_skill}</span>)
+      user_skill = this.props.user_skill
     }
     if (!(this.props.user2_id) && this.props.user_id != this.props.current_user) {
       // join = (<a href={"/matches/" + this.props.id + "/join/" + this.props.current_user}>Edit</a>)
@@ -40,13 +45,13 @@ export default class MatchCard extends Component {
     }
 
     if (this.props.user_skill) {
-      user2_skill = (<span><br />Skill level: {this.props.user2_skill}</span>)
+      user2_skill = this.props.user2_skill
     }
 
     return (
       <div>
         <p>
-          Match time: {this.props.timeslot} <br /> Location: {this.props.location} <br /> Player 1: {this.props.user_name} {user_skill}(user id {this.props.user_id}) <br /> Player 2: {user2} (user id {this.props.user2_id}) {user2_skill}
+          Match time: {this.props.timeslot} <br /> Location: {this.props.location} <br /> Player 1: {this.props.user_name} <br />Skill level: {user_skill} <br /> Player 2: {user2}<br /> Skill level: {user2_skill}
         </p>
         <span id={"edit"}>
           {edit} &nbsp;
