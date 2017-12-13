@@ -1,5 +1,13 @@
 class Match < ApplicationRecord
   belongs_to :user
+  validate :match_date_cannot_be_in_the_past
+
+
+  def match_date_cannot_be_in_the_past
+    if timeslot < Date.today
+      errors.add(:timeslot_error, "You can't schedule a match in the past")
+    end
+  end
 
   def self.match_info
     matches = []
