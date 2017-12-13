@@ -2,3 +2,9 @@
 <%= render 'form', match: @match %>
 
 <%= link_to 'Back', matches_path %>
+<%= react_component("Map", {
+  googleApiKey: @google_api_key,
+  center: @map_center,
+  zoom: @map_zoom,
+  pins: @locations
+}) %>
