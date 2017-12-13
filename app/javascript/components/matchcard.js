@@ -5,7 +5,7 @@ export default class MatchCard extends Component {
   render(){
     var destroy
     var edit
-    var join
+    var joinLeave
     var user2
     var user2_skill
     var user_skill
@@ -14,11 +14,18 @@ export default class MatchCard extends Component {
     }
     if (!(this.props.user2_id) && this.props.user_id != this.props.current_user) {
       // join = (<a href={"/matches/" + this.props.id + "/join/" + this.props.current_user}>Edit</a>)
-      join = (
+      joinLeave = (
         <form action="join" method="get">
           <input type="hidden" name="user2_id" value={this.props.current_user}/>
           <input type="hidden" name="id" value={this.props.id}/>
           <input type="submit" value="Join Match"/>
+        </form>
+      )
+    } else if (this.props.user2_id == this.props.current_user) {
+      joinLeave = (
+        <form action="leave" method="get">
+          <input type="hidden" name="id" value={this.props.id}/>
+          <input type="submit" value="Leave Match"/>
         </form>
       )
     }
@@ -49,7 +56,7 @@ export default class MatchCard extends Component {
           {destroy}
         </span>
         <span id ={"join"}>
-          {join}
+          {joinLeave}
         </span>
       </div>
     )
