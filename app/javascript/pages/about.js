@@ -40,7 +40,7 @@ export default class About extends Component {
                   <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center mb-4">
-                  <img class="rounded-circle img-fluid d-block mx-auto" src="https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-10.jpg" alt=""/>
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="https://cdn-s3.si.com/images/Puppy-Bowl-Winston.jpg" alt=""/>
                   <h3>Andrew Levy</h3>
                   <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
                 </div>
