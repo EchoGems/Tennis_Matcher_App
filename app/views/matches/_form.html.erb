@@ -15,10 +15,12 @@
     <input type="hidden" name="match[user_id]" value="<%= current_user.id %>">
   </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :match_location %>
-  </div>
+  <select name="match[location]">
+    <option selected disabled="">Select Court Location</option>
+    <% for location in Location.all %>
+    <option value=<%=location.name%>><%=location.name.gsub!(/_/, ' ')%></option>
+    <% end %>
+  </select>
 
 
   <div class="field">

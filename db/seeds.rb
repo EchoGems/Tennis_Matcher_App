@@ -9,18 +9,26 @@ Location.destroy_all
 
 Location.create([
   {
-    name: "Balboa Tennis Club",
+    name: "Balboa_Tennis_Club",
     address: "2221 Morley Field, San Diego, CA",
     zip: "92104",
     lat: 32.740122,
     lng: -117.141197
   },
   {
-    name: "Miramar College Tennis Courts",
+    name: "Miramar_College_Tennis_Courts",
     address: "10440 Black Mountain Rd, San Diego, CA",
     zip: "92126",
     lat: 32.907676,
     lng: -117.120020
+  },
+
+  {
+    name: "Linda_Vista_Recreation_Center",
+    address: "7064 Levant ST, San Diego, CA",
+    zip: "92111",
+    lat: 32.792214,
+    lng: -117.169947
   }
   ])
 
