@@ -12,7 +12,7 @@ const TooltipStyles = {
   padding: '6px',
   position: 'absolute',
   bottom: '0px',
-  width: '30px'
+  width: '100px'
 }
 
 export default class Pin extends React.Component {
