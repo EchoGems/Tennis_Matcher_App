@@ -1,6 +1,7 @@
 class MatchesController < ApplicationController
-  before_action :set_match, only: [:show, :edit, :update, :destroy]
+  before_action :set_match, only: [:show, :edit, :update, :destroy, :join, :leave]
   before_action :authenticate_user!, except: [:destroy]
+  # before_action :set_user_info, only: [:show]
 
   # GET /matches
   # GET /matches.json
@@ -10,11 +11,20 @@ class MatchesController < ApplicationController
   end
 
   def index
-    @matches = Match.all
+    @matches = Match.match_info
   end
 
-  # GET /matches/1
-  # GET /matches/1.json
+  def join
+    @match.update(user2_id: params[:user2_id])
+    @match.save
+    redirect_to '/matches'
+  end
+  def leave
+    @match.update(user2_id: nil)
+    @match.save
+    redirect_to '/matches'
+  end
+
   def show
   end
 
@@ -35,7 +45,7 @@ class MatchesController < ApplicationController
 
     respond_to do |format|
       if @match.save
-        format.html { redirect_to @match, notice: 'Match was successfully created.' }
+        format.html { redirect_to '/matches', notice: 'Match was successfully created.' }
         format.json { render :show, status: :created, location: @match }
       else
         format.html { render :new }
@@ -49,7 +59,7 @@ class MatchesController < ApplicationController
   def update
     respond_to do |format|
       if @match.update(match_params)
-        format.html { redirect_to @match, notice: 'Match was successfully updated.' }
+        format.html { redirect_to '/matches', notice: 'Match was successfully updated.' }
         format.json { render :show, status: :ok, location: @match }
       else
         format.html { render :edit }
@@ -80,6 +90,12 @@ class MatchesController < ApplicationController
     def set_match
       @match = Match.find(params[:id])
     end
+
+    # def set_user_info
+    #   @user1_first_name = User.find(@match.user_id).first_name
+    #   @user1_last_name = User.find(@match.user_id).last_name
+    # end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params

@@ -37,6 +37,6 @@ Location.create([
   #   name: "",
   #   address: "",
   #   zip: "",
-  #   lat: "",
-  #   lng: ""
+  #   lat: ,
+  #   lng: ,
   # }
