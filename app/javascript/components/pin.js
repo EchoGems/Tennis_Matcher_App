@@ -12,7 +12,7 @@ const TooltipStyles = {
   padding: '6px',
   position: 'absolute',
   bottom: '0px',
-  width: '30px'
+  width: '100px'
 }
 
 export default class Pin extends React.Component {
@@ -20,7 +20,7 @@ export default class Pin extends React.Component {
     return(
       <div>
         {this.props.$hover &&
-          <div style={TooltipStyles}>{this.props.name}</div>
+          <div style={TooltipStyles}>{this.props.name.replace(/_/g, " ")}</div>
         }
         <div style={PinStyles}><MapPin /></div>
       </div>
