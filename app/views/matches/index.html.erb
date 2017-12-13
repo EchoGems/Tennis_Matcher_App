@@ -18,7 +18,7 @@
       <tr>
         <td><%= match.user_id %></td>
         <td><%= match.user2_id %></td>
-        <td><%= match.location %></td>
+        <td><%= match.location.gsub!(/_/, ' ')%></td>
         <td><%= match.timeslot %></td>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>
