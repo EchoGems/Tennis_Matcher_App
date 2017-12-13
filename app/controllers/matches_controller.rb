@@ -26,10 +26,18 @@ class MatchesController < ApplicationController
   # GET /matches/new
   def new
     @match = Match.new
+    @google_api_key = 'AIzaSyCsAS0jtTVddtNAwYcrfDhPZziN6F620jA'
+    @map_center = [32.764212, -117.162570]
+    @map_zoom = 11
+    @locations = Location.all
   end
 
   # GET /matches/1/edit
   def edit
+    @google_api_key = 'AIzaSyCsAS0jtTVddtNAwYcrfDhPZziN6F620jA'
+    @map_center = [32.764212, -117.162570]
+    @map_zoom = 11
+    @locations = Location.all
   end
 
   # POST /matches
@@ -73,10 +81,7 @@ class MatchesController < ApplicationController
   end
 
   def map
-   @google_api_key = 'AIzaSyCsAS0jtTVddtNAwYcrfDhPZziN6F620jA'
-   @map_center = [32.764212, -117.162570]
-   @map_zoom = 11
-   @locations = Location.all
+
   end
 
   private
