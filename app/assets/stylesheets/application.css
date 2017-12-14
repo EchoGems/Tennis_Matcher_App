@@ -130,8 +130,8 @@ text-shadow: 2px 2px 0px black;
   background-size:cover;
   background-repeat: no-repeat;
   background-position:center;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  /*overflow: hidden;*/
 }
 
 #sign-in-body:before {
