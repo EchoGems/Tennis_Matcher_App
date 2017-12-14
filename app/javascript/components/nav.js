@@ -18,13 +18,13 @@ export default class NavBar extends Component {
                   <a className="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/users/sign_in">Sign in</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/users/sign_up">Sign up</a>
-                </li>
-                <li className="nav-item">
                   <a className="nav-link" href="/publics/about">About</a>
+                </li>
+                <li className="nav-item">
+                <a className="nav-link" href="/users/sign_in">Sign in</a>
+                </li>
+                <li className="nav-item">
+                <a className="nav-link" href="/users/sign_up">Sign up</a>
                 </li>
               </ul>
             </div>

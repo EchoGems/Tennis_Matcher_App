@@ -1,36 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class='matches-body'>
 
-<h1>Matches</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>User2</th>
-      <th>Location</th>
-      <th>Timeslot</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1 id='matches-head'>Matches</h1>
 
-  <tbody>
-    <% @matches.each do |match| %>
-      <tr>
-        <td><%= match.user_id %></td>
-        <td><%= match.user2_id %></td>
-        <td><%= match.location %></td>
-        <td><%= match.timeslot %></td>
-        <td><%= link_to 'Show', match %></td>
-        <td><%= link_to 'Edit', edit_match_path(match) %></td>
-        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <table class="table table-hover" id='matches-table'>
+    <thead>
+      <tr class="table-info">
+        <th>User</th>
+        <th>User2</th>
+        <th>Location</th>
+        <th>Timeslot</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody class="table-active">
+      <% @matches.each do |match| %>
+        <tr>
+          <td><%= match.user_id %></td>
+          <td><%= match.user2_id %></td>
+          <td><%= match.location %></td>
+          <td><%= match.timeslot %></td>
+          <td><%= link_to 'Show', match %></td>
+          <td><%= link_to 'Edit', edit_match_path(match) %></td>
+          <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Match', new_match_path %>
+  <br>
 
-<br />
-User ID: <%= current_user.id %>
+  <%= link_to 'New Match', new_match_path %>
+
+  <br />
+  User ID: <%= current_user.id %>
+</div>

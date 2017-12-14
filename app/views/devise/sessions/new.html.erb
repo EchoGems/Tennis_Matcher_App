@@ -1,34 +1,37 @@
-<div class="page_style">
-  <div class="sign-in-box">
-    <h2>Sign in</h2>
+<div class='body'id='sign-in-body'>
+  <div class="page_style">
+    <h3 class="sign-in-title">Welcome to Tennis Love</h3>
+    <div class="sign-in-box">
+      <h2>Sign in</h2>
 
-<div>
-  <%= flash[:alert]%>
-</div>
+      <div>
+        <%= flash[:alert]%>
+      </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
     </div>
-
-    <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-    <% end -%>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
-    <% end %>
-
-    <%= render "devise/shared/links" %>
   </div>
 </div>

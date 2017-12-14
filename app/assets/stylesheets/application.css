@@ -23,7 +23,9 @@
   display: table, block;
   clear: both;
   margin-left: 10px;
+  align-items: center;
 }
+
 #availability {
   clear: both;
   /*margin-top: 100px;*/
@@ -90,7 +92,6 @@ img {
   display:flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-left: auto;
 }
 
 .card-content {
@@ -106,15 +107,101 @@ text-shadow: 2px 2px 0px black;
 
 .card-title {
   text-align: center;
+  background:rgba(0,0,0,0.75);
+  color: #fff;
+  display: inline;
+  padding: 0.5rem;
 }
 
 .card-text {
   text-align: center;
+  background: rgba(0,0,0,0.75);
+  display: inline;
+  padding: 0.5rem;
+  float: center;
 }
+
 .page_style{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
   margin-left:50px;
 }
+
+#sign-in-body:before {
+  background: url('https://rbfacilities.byu.edu/images/upload/076cc830fe9ea4e82cd6aa3dd1fc47bac2a9bb45.jpeg')
+  no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity:0.6;
+}
+
+#matches-head {
+  text-align: center;
+}
+
+.sign-in-title{
+  color: white;
+}
+
 .sign-in-box {
+  margin-top: 60px;
   border-style: solid black;
   border-width:2px 2px 2px 2px;
+  background: white;
+  padding: 25px 50px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65)
+}
+.new-match-box {
+  margin-top: 60px;
+  border-style: solid black;
+  border-width:2px 2px 2px 2px;
+  background: white;
+  padding: 25px 50px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65)
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
+  max-height: calc(100vh - 80px);
+  background: rgba(135,206,250,0.75);
+  /*padding-bottom: 60px;*/
+}
+
+.matches-body {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
+  max-height: calc(100vh - 80px);
+  /*padding-bottom: 60px;*/
+}
+
+.home-title {
+  /*text-align: center;
+  background: rgba(255,255,255,0.75);
+  padding: 0.5rem;
+  float: left;*/
+}
+.footer {
+  text-align: center;
+  position: absolute;
+  width:100%;
+  height:60px;
+  background-color: #202020;
+  color: white;
+}
+.learn-link {
+  color: white;
+}
+.navbar {
+  margin-bottom:0 !important;
+}
+#user_profile {
+  background-color: lightblue;
+}
+#new-match-body {
+  background: rgba(135,206,250,0.75);
 }
