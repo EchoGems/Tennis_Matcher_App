@@ -27,7 +27,7 @@
   content: "";
   display: table, block;
   clear: both;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
   align-items: center;
 }
 
@@ -259,4 +259,8 @@ text-shadow: 2px 2px 0px black;
     background-size: cover;
     background-position: center;
   }
+
+.btn-block {
+  width: 100px;
+  height: 60px;
 }

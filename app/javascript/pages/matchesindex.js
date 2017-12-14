@@ -25,10 +25,13 @@ export default class MatchesIndex extends Component {
     })
 
     return(
-      <div id = {"matchesindex"}>
-        {matches}
-        <div id = {"new"}>
+      <div id={'matchesindex'}>
+        <div>
           <a href="/matches/new">New match</a>
+        </div>
+        <br />
+        <div>
+          {matches}
         </div>
       </div>
     )
