@@ -22,7 +22,7 @@
   content: "";
   display: table, block;
   clear: both;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
   align-items: center;
 }
 
@@ -209,4 +209,8 @@ text-shadow: 2px 2px 0px black;
 }
 #new-match-body {
   background: rgba(135,206,250,0.75);
+}
+.btn-block {
+  width: 100px;
+  height: 60px;
 }

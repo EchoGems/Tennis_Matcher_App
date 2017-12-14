@@ -23,7 +23,7 @@ export default class Home extends Component {
                             <br />
                             <h1>It starts with LOVE</h1>
                               <p class="home-title">Find fellow tennis players in San Diego and set up a time and place to play!</p>
-                              <a href="publics/about" className="btn btn-info">Learn More </a>
+                              <a href="users/sign_up" className="btn btn-info">Let's Play!</a>
                           </div>
                       </div>
                   </div>
