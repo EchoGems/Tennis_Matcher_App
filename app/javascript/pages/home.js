@@ -21,9 +21,9 @@ export default class Home extends Component {
                       <div className="row">
                           <div className="col-lg-12">
                             <br />
-                            <h1>It starts with LOVE</h1>
-                              <p class="home-title">Find fellow tennis players in San Diego and set up a time and place to play!</p>
-                              <a href="publics/about" className="btn btn-info">Learn More </a>
+                            <h1 class="home-title-big"><strong>It starts with LOVE</strong></h1>
+                              <p class="home-title"><strong>Find fellow tennis players in San Diego and set up a time and place to play!</strong></p>
+                              <a href="publics/about" className="btn custom-btn">Learn More </a>
                           </div>
                       </div>
                   </div>

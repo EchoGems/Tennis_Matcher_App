@@ -5,12 +5,6 @@ export default class Card3 extends Component {
 
     render() {
       var divStyle = {
-        width: "40rem",
-        height: "25rem",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPositionY:"bottom",
-        backgroundPositionX: "center",
         backgroundImage:'url("https://images.unsplash.com/37/tEREUy1vSfuSu8LzTop3_IMG_2538.jpg?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D")'
       }
         return (
