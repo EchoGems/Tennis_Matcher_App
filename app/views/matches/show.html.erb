@@ -11,10 +11,10 @@
     <%= @match.user2_id %>
   </p>
 
-  <p>
-    <strong>Location:</strong>
-    <%= @match.location %>
-  </p>
+<p>
+  <strong>Location:</strong>
+  <%= @match.location.gsub!(/_/, ' ') %>
+</p>
 
   <p>
     <strong>Timeslot:</strong>

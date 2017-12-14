@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :matches
   root 'publics#home'
   get '/matches' => 'matches#index'
-  get '/map' => 'matches#map'
+  post 'update' => 'publics#update'
+  get 'join' => 'matches#join'
+  get 'leave' => 'matches#leave'
   post '/update_skill' => 'publics#update_skill'
   post '/update_image' => 'publics#update_image'
 end
