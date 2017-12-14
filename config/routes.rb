@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get 'leave' => 'matches#leave'
   post '/update_skill' => 'publics#update_skill'
   post '/update_image' => 'publics#update_image'
+
 end
