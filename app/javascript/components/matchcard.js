@@ -60,8 +60,9 @@ export default class MatchCard extends Component {
     return (
       <div>
         <p>
-          Match date: {date} <br />Match time: {time} <br /> Location: {this.props.location} <br /> Player 1: {this.props.user_name} <br />Skill level: {user_skill} <br /> Player 2: {user2}<br /> Skill level: {user2_skill}
+          Match date: {date} <br />Match time: {time} <br /> Location: {this.props.location} <br /> Address: {this.props.address} {this.props.zip} <br /> Player 1: {this.props.user_name} <br />Skill level: {user_skill} <br /> Player 2: {user2}<br /> Skill level: {user2_skill}
         </p>
+        {console.log(this.props)}
         <span id={"edit"}>
           {edit} &nbsp;
         </span>
