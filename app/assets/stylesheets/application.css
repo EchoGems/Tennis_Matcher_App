@@ -43,6 +43,10 @@
   margin-top: 40px;
 }
 
+.navbar-dark .navbar-toggler {
+    display: none;
+}
+
 img {
   height: 200px;
   width: 200px;
@@ -240,7 +244,41 @@ text-shadow: 2px 2px 0px black;
 
 /*--------------------------------------------------- Media Query ------*/
 
+@media screen and (min-width: 769px) and (max-width: 1030px) {
+  .navbar-expand-lg {
+    display: none;
+  }
+
+  .navbar-brand {
+    float: left;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-dark .navbar-toggler {
+      display: none;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .navbar-dark .navbar-toggler {
+      display: block;
+  }
+
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+
+  .navbar-nav {
+    display: none !important;
+  }
+
   .jumbotron {
     padding-top: 0px;
     padding-bottom: 20px;
