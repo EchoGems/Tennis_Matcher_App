@@ -8,7 +8,7 @@ export default class About extends Component {
             <div class="container">
               <h1 class="my-4">About Us
               </h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+              <p>We are the awesome Team EchoGems from the Echo 2017 cohort from Learn Academy</p>
 
               <div class="row">
                 <div class="col-lg-12">

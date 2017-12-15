@@ -14,6 +14,11 @@
  *= require_self
  */
 
+
+/*----------------------------------------------------- RESETS ------*/
+
+/*------------------------------------------------------  BODY ------*/
+
 #user_profile {
   /*display: flex;
   flex-flow: row wrap;s
@@ -46,6 +51,22 @@ img {
   margin-top: 40px;
   margin-left: 10px;
 }
+
+.custom-btn {
+  background-color: #5bc0de;
+  color: #FFF;
+  border: 1px solid #5bc0de;
+}
+
+.custom-btn:hover {
+  background-color: #FFF;
+  color: #5bc0de;
+}
+
+.btn:hover {
+  color: #5bc0de;
+}
+
 .jumbotron-billboard .img {
     margin-bottom: 0px;
     opacity: 0.6;
@@ -61,24 +82,22 @@ img {
     left:0;
     z-index:1;
 }
-.jumbotron h2 {margin-top:0;}
+
+.jumbotron h2 {
+  margin-top:0;
+}
+
 .jumbotron {
   position:relative;
   padding-top: 0px;
   margin-top: 0px;
   padding-bottom:50px;
 }
+
 .jumbotron .container {
   height: 40vh;
   position:relative;
   z-index:2;
-}
-
-@media screen and (max-width: 768px) {
-  .jumbotron {
-    padding-top: 0px;
-    padding-bottom:20px;
-  }
 }
 
 .card {
@@ -86,10 +105,15 @@ img {
   max-height: 40rem;
   background-repeat: no-repeat;
   background-size: contain;
+  width: 40rem;
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #home-page-cards {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -107,7 +131,7 @@ text-shadow: 2px 2px 0px black;
 
 .card-title {
   text-align: center;
-  background:rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.75);
   color: #fff;
   display: inline;
   padding: 0.5rem;
@@ -121,16 +145,16 @@ text-shadow: 2px 2px 0px black;
   float: center;
 }
 
-.page_style{
+.page_style {
   display:flex;
   flex-direction: column;
   align-items: center;
   background-image: url("https://images.unsplash.com/photo-1505232219783-f1b72c5880e4?auto=format&fit=crop&w=700&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
   image-rendering: pixelated;
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position:center;
-  min-height: 100vh;
+  background-position: center;
+  min-height: 85vh;
   /*overflow: hidden;*/
 }
 
@@ -139,7 +163,7 @@ text-shadow: 2px 2px 0px black;
   no-repeat;
   background-size: cover;
   background-position: center;
-  opacity:0.6;
+  opacity: 0.6;
 }
 
 #matches-head {
@@ -148,6 +172,7 @@ text-shadow: 2px 2px 0px black;
 
 .sign-in-title{
   color: white;
+  font-weight: 900;
 }
 
 #matchesindex {
@@ -160,7 +185,7 @@ text-shadow: 2px 2px 0px black;
   border-width:2px 2px 2px 2px;
   background: white;
   padding: 25px 50px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65)
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65);
 }
 .new-match-box {
   margin-top: 60px;
@@ -190,26 +215,28 @@ text-shadow: 2px 2px 0px black;
 
 .body {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  min-height: calc(100vh - 80px);
-  max-height: calc(100vh - 80px);
-  background: rgba(135,206,250,0.75);
-  /*padding-bottom: 60px;*/
+  min-height: 85vh;
+  background: rgba(135 ,206 ,250 , .75);
 }
 
 .matches-body {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 80px);
-  max-height: calc(100vh - 80px);
+  min-height: 60vh;
+  /*max-height: calc(100vh - 80px);*/
   /*padding-bottom: 60px;*/
 }
 
 .home-title {
-  /*text-align: center;
-  background: rgba(255,255,255,0.75);
+  color: #f;
+  /*background: rgba(0,0,0,0.75);*/
   padding: 0.5rem;
-  float: left;*/
+  font-weight:2000;
+}
+.home-title-big {
+  color: #fff;
 }
 .footer {
   text-align: center;
@@ -231,6 +258,29 @@ text-shadow: 2px 2px 0px black;
 #new-match-body {
   background: rgba(135,206,250,0.75);
 }
+
+/*--------------------------------------------------- Media Query ------*/
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+
+  #home-page-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 300rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
 .btn-block {
   width: 100px;
   height: 60px;

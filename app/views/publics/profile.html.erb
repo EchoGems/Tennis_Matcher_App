@@ -16,14 +16,14 @@
             <option name= "skill_level" value="Intermediate">Intermediate</option>
             <option name= "skill_level" value="Advanced">Advanced</option>
           </select>
-          <input type="submit" value="Update Skill Level">
+          <input class="btn btn-info btn-sm" type="submit" value="Update Skill">
         </div>
       </form>
 
       <form style="display:inline-block" action="/update_image" method="post" enctype="multipart/form-data">
           <p>Select your profile picture</p>
           <input type="file" name="image" accept="image/*">
-          <input type="submit" value="Update Picture">
+          <input class="btn btn-secondary btn-sm"type="submit" value="Update Picture">
       </form>
       <div>
         <%= link_to "Edit/Cancel Account", edit_user_registration_path %>
