@@ -176,7 +176,8 @@ text-shadow: 2px 2px 0px black;
 }
 
 #matchesindex {
-  background-color: rgba(135,206,250,75)
+  background-color: #B2DDF7;
+  min-height: 85vh;
 }
 
 .sign-in-box {
@@ -206,11 +207,13 @@ text-shadow: 2px 2px 0px black;
   padding: 25px 50px;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65);
   max-width: 400px;
+  min-height: 280px;
 }
 
 .contain {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .body {

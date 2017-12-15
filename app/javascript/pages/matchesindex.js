@@ -28,8 +28,8 @@ export default class MatchesIndex extends Component {
 
     return(
       <div id={'matchesindex'}>
-        <div className={"btn btn-info component-but buts"}>
-          <a href="/matches/new">New match</a>
+        <div>
+          <a className={"btn btn-secondary btn-lg"} href="/matches/new">New match</a>
         </div>
         <br />
         <div className={"contain"}>
