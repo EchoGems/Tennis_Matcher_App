@@ -9,6 +9,7 @@ export default class MatchCard extends Component {
     var user2
     var user2_skill
     var user_skill
+        //below code turns match.timeslot's datetime format into a displayable match date and match time
     var date = this.props.timeslot.toString().slice(5, 7) + "/" + this.props.timeslot.toString().slice(8, 10) + "/" + this.props.timeslot.toString().slice(0, 4)
     var timeHour = this.props.timeslot.toString().slice(11, 13)
     var timeMin = this.props.timeslot.toString().slice(14, 16)
@@ -32,22 +33,22 @@ export default class MatchCard extends Component {
         <form action="join" method="get">
           <input type="hidden" name="user2_id" value={this.props.current_user}/>
           <input type="hidden" name="id" value={this.props.id}/>
-          <input type="submit" value="Join Match"/>
+          <input className="btn btn-primary" type="submit" value="Join Match"/>
         </form>
       )
     } else if (this.props.user2_id == this.props.current_user) {
       joinLeave = (
         <form action="leave" method="get">
           <input type="hidden" name="id" value={this.props.id}/>
-          <input type="submit" value="Leave Match"/>
+          <input className="btn btn-primary" type="submit" value="Leave Match"/>
         </form>
       )
     }
     if (this.props.current_user == this.props.user_id) {
-      edit = (<a href={"/matches/" + this.props.id + "/edit"}>Edit</a>)
+      edit = (<a className="btn btn-info" href={"/matches/" + this.props.id + "/edit"}>Edit</a>)
     }
     if (this.props.current_user == this.props.user_id) {
-      destroy = (<a data-confirm="Are you sure you want to delete this appointment?" href={"/matches/" + this.props.id} data-method="delete">Delete</a>)
+      destroy = (<a className="btn btn-info" data-confirm="Are you sure you want to delete this appointment?" href={"/matches/" + this.props.id} data-method="delete">Delete</a>)
     }
     if (this.props.user2_id) {
         user2 = this.props.user2_name
@@ -57,23 +58,37 @@ export default class MatchCard extends Component {
       user2_skill = this.props.user2_skill
     }
 
+    // check if current user matches player 1 - change background color of matchcard
+    if(this.props.current_user === this.props.user_id){
+      var background = {backgroundColor:"#67A1E0"}
+    } else if(this.props.current_user === this.props.user2_id) {
+      var background = {backgroundColor:"#9EEFE5"}
+      var hidebuttons = {display:"none"}
+    } else {
+      var background = {backgroundColor:"#D8E6DF"}
+      var hidebuttons = {display:"none"}
+    }
+      // if adding profile pic thumbnails, increase min height in #matchComponent in application.css
     return (
       <div>
-        <p>
-          Match date: {date} <br />Match time: {time} <br /> Location: {this.props.location} <br /> Address: {this.props.address} {this.props.zip} <br /> Player 1: {this.props.user_name} <br />Skill level: {user_skill} <br /> Player 2: {user2}<br /> Skill level: {user2_skill}
-        </p>
-        {console.log(this.props)}
-        <span id={"edit"}>
-          {edit} &nbsp;
-        </span>
+        <div className={"matchComponent"} style={background}>
 
-        <span id ={"destroy"}>
-          {destroy}
-        </span>
-        <span id ={"join"}>
-          {joinLeave}
-        </span>
+          <p>
+            Match date: {date} <br />Match time: {time} <br /> Location: {this.props.location} <br /> Address: {this.props.address} {this.props.zip} <br /> Player 1: {this.props.user_name} <br />Skill level: {user_skill} <br /> Player 2: {user2}<br /> Skill level: {user2_skill}
+          </p>
+          <span style={hidebuttons}>
+            {edit} &nbsp;
+          </span>
+
+          <span style={hidebuttons}>
+            {destroy}
+          </span>
+          <span>
+            {joinLeave}
+          </span>
+        </div>
       </div>
+
     )
   }
 }
