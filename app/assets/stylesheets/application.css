@@ -71,7 +71,7 @@ img {
     margin-bottom: 0px;
     opacity: 0.6;
     color: #fff;
-    background: #000 url("https://images.unsplash.com/photo-1501813354559-db602a6d8077?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D") top center no-repeat;
+    background: #000 url("net.jpg") top center no-repeat;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -149,7 +149,7 @@ text-shadow: 2px 2px 0px black;
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("https://images.unsplash.com/photo-1505232219783-f1b72c5880e4?auto=format&fit=crop&w=700&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-image: url("courtcorner.jpg");
   image-rendering: pixelated;
   background-size: cover;
   background-repeat: no-repeat;
