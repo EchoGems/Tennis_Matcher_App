@@ -1,3 +1,16 @@
+<script type="text/javascript">
+  function showInfo(){
+    console.log("I was clicked")
+    var tooltip = document.getElementById("tooltip_border")
+
+    if(tooltip.style.display === "block"){
+      tooltip.style.display = "none";
+    } else {
+      tooltip.style.display = "block";
+    }
+  }
+</script>
+
 <div id="user_profile" class='body'>
   <h1>My Profile</h1>
   <div id="user_info">
@@ -7,7 +20,6 @@
       <p><strong>Last Name:</strong> <%=current_user.last_name%></p>
       <p><strong>Email:</strong> <%=current_user.email%></p>
       <p><strong>Skill Level:</strong> <%=current_user.skill_level%></p>
-
       <form action="/update_skill" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <select name= "skill_level" class="custom-select">
@@ -16,10 +28,22 @@
             <option name= "skill_level" value="Intermediate">Intermediate</option>
             <option name= "skill_level" value="Advanced">Advanced</option>
           </select>
-          <input class="btn btn-info btn-sm" type="submit" value="Update Skill">
+          <input class="btn btn-info btn-sm" type="submit" value="Update Skill" />
+          <img src="/assets/Info.jpg" onClick="showInfo()" class="tooltip_icon" />
+          <br />
+          <div id="tooltip_border">
+            <div class="skill_show">
+              Beginner: Able to play short rallies of slow pace.
+            </div>
+            <div class="skill_show">
+              Intermediate: Able to serve and play consistent rallies.
+            </div>
+            <div class="skill_show">
+              Advanced: Able to serve with power and stroke accuracy.
+            </div>
+          </div>
         </div>
       </form>
-
       <form style="display:inline-block" action="/update_image" method="post" enctype="multipart/form-data">
           <p>Select your profile picture</p>
           <input type="file" name="image" accept="image/*">
