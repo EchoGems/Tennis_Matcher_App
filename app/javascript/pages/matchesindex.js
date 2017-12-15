@@ -8,10 +8,12 @@ export default class MatchesIndex extends Component {
       matches: this.props.matches,
       current_user: this.props.current_user
     }
+    console.log(this.state.current_user)
   }
 
 
   render(){
+
     var today = new Date()
     today = parseInt(today.getFullYear()+""+(today.getMonth()+1)+today.getDate())
     var current_user = this.state.current_user
@@ -26,11 +28,11 @@ export default class MatchesIndex extends Component {
 
     return(
       <div id={'matchesindex'}>
-        <div>
+        <div className={"btn btn-info component-but buts"}>
           <a href="/matches/new">New match</a>
         </div>
         <br />
-        <div>
+        <div className={"contain"}>
           {matches}
         </div>
       </div>

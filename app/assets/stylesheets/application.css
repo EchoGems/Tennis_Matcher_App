@@ -150,6 +150,10 @@ text-shadow: 2px 2px 0px black;
   color: white;
 }
 
+#matchesindex {
+  background-color: rgba(135,206,250,75)
+}
+
 .sign-in-box {
   margin-top: 60px;
   border-style: solid black;
@@ -165,6 +169,23 @@ text-shadow: 2px 2px 0px black;
   background: white;
   padding: 25px 50px;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65)
+}
+.component-but {
+  margin: 0px 5px 0px 5px;
+}
+.matchComponent {
+  margin: 20px;
+  border-style: solid black;
+  border-width:2px 2px 2px 2px;
+  background: white;
+  padding: 25px 50px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65);
+  max-width: 400px;
+}
+
+.contain {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .body {
@@ -213,4 +234,13 @@ text-shadow: 2px 2px 0px black;
 .btn-block {
   width: 100px;
   height: 60px;
+}
+
+.buts {
+  color: white;
+}
+
+.buts:hover {
+  color: blue;
+  background: #1F9BCF;
 }
