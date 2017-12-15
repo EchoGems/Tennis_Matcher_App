@@ -62,7 +62,7 @@ export default class MatchCard extends Component {
     if(this.props.current_user === this.props.user_id){
       var background = {backgroundColor:"rgb(255, 241, 122)"}
     } else if(this.props.current_user === this.props.user2_id) {
-      var background = {backgroundColor:"rgb(249, 172, 89)"}
+      var background = {backgroundColor:"#46a344"}
       var hidebuttons = {display:"none"}
     } else {
       var background = {backgroundColor:"rgb(201, 255, 121)"}
