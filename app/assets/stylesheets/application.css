@@ -18,13 +18,33 @@
 /*----------------------------------------------------- RESETS ------*/
 
 /*------------------------------------------------------  BODY ------*/
+.skill_show {
+  margin: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.tooltip_icon {
+  display: inline;
+  height: 20px;
+  width: 20px;
+  float: none;
+  cursor: pointer;
+}
+
+#tooltip_border {
+  border: solid black 1px;
+  border-radius: 5px;
+  margin-left: 10px;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
 
 #user_profile {
   /*display: flex;
   flex-flow: row wrap;s
   text-align: center;*/
-  clear: both;
-  content: "";
   display: table, block;
   clear: both;
   /*margin-left: 10px;*/
@@ -47,9 +67,7 @@ img {
   height: 200px;
   width: 200px;
   float: left;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  margin-left: 10px;
+  margin: 40px 0 40px 10px;
 }
 
 .custom-btn {

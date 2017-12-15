@@ -17,7 +17,7 @@
 
   <select name="match[location]">
     <option selected disabled="">Select Court Location</option>
-    <% for location in Location.all %>
+    <% for location in Location.order("name") %>
     <option value=<%=location.name%>><%=location.name.gsub!(/_/, ' ')%></option>
     <% end %>
   </select>
