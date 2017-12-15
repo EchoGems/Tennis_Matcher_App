@@ -19,6 +19,16 @@ Rails.application.configure do
   # `config/secrets.yml.key`.
   config.read_encrypted_secrets = true
 
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV.fetch('tennis-matcher'),
+      access_key_id: ENV.fetch('AKIAI3VXTLI5Z4I5ZP0A'),
+      secret_access_key: ENV.fetch('Mmn4BVJPM0atr9pebZoTWc6DMC0DXW8d4M6/AZZE'),
+      s3_region: ENV.fetch('us-east-1'),
+    }
+  }
+
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?

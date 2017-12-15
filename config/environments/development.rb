@@ -5,7 +5,15 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
-
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV.fetch('tennis-matcher'),
+      access_key_id: ENV.fetch('AKIAI3VXTLI5Z4I5ZP0A'),
+      secret_access_key: ENV.fetch('Mmn4BVJPM0atr9pebZoTWc6DMC0DXW8d4M6/AZZE'),
+      s3_region: ENV.fetch('us-east-1'),
+    }
+  }
   # Do not eager load code on boot.
   config.eager_load = false
 

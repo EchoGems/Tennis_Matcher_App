@@ -21,7 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'aws-sdk', '~> 2.3'
 gem 'react-bootstrap-rails'
 
 gem 'devise'
