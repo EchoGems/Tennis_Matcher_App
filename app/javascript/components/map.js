@@ -5,10 +5,12 @@ export default class Map extends React.Component {
   render() {
     return (
       <div>
+        <div class="map-title">
         <h2>
-          Check out the court locations:
+          SD Court locations
         </h2>
-        <div style={{width: '500px', height: '500px'}}>
+        </div>
+        <div style={{width: '400px', height: '400px', border: "solid #fff 5px"}}>
           <GoogleMap
             bootstrapURLKeys={{key: this.props.googleApiKey}}
             center={this.props.center}
