@@ -1,16 +1,15 @@
 <div class='body'id="new-match-body">
-      <div class="page_style">
-        <div class="new-match-box">
-          <h1>New Match</h1>
-          <%= render 'form', match: @match %>
-           <%= link_to 'Back', matches_path %>
-        </div>
-          <%= react_component("Map", {
-            googleApiKey: @google_api_key,
-            center: @map_center,
-            zoom: @map_zoom,
-            pins: @locations
-          }) %>
-      </div>
+  <div class="new-match-box match-left split-item">
+    <h1>New Match</h1>
+    <%= render 'form', match: @match %>
+    <%= link_to 'Back', matches_path %>
+  </div>
+  <div class="match-right split-item">
+    <%= react_component("Map", {
+      googleApiKey: @google_api_key,
+      center: @map_center,
+      zoom: @map_zoom,
+      pins: @locations
+      }) %>
     </div>
-
+</div>
