@@ -4,6 +4,9 @@ import {Nav, Navbar, NavItem, NavDropdown, Collapse, Brand, Toggle, Header, Menu
 export default class NavBar extends Component {
 
     render() {
+      function myFunction(menu) {
+        menu.classList.toggle("change");
+      }
         return (
           <div>
           <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
