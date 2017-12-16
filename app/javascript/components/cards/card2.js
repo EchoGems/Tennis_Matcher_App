@@ -5,7 +5,7 @@ export default class Card2 extends Component {
 
   render() {
     var divStyle = {
-      backgroundImage: 'url("https://images.unsplash.com/photo-1511968410596-41f6437a0bbe?auto=format&fit=crop&w=967&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D")'
+      backgroundImage: 'url("assets/tenniscourt.jpg")'
     }
       return (
         <div style={divStyle} id="card-1" className="card text-white bg-info mb-3">

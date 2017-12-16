@@ -15,9 +15,9 @@
     <input type="hidden" name="match[user_id]" value="<%= current_user.id %>">
   </div>
 
-  <select name="match[location]">
+  <select class="form-group" name="match[location]">
     <option selected disabled="">Select Court Location</option>
-    <% for location in Location.all %>
+    <% for location in Location.order("name") %>
     <option value=<%=location.name%>><%=location.name.gsub!(/_/, ' ')%></option>
     <% end %>
   </select>
@@ -29,6 +29,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <input type="submit" name="commit" value="Create Match" data-disable-with="Create Match" class="btn btn-primary btn-sm" />
   </div>
 <% end %>
