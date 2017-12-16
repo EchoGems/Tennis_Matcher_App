@@ -22,10 +22,10 @@ Rails.application.configure do
   config.paperclip_defaults = {
     storage: :s3,
     s3_credentials: {
-      bucket: ENV.fetch('tennis-matcher'),
-      access_key_id: ENV.fetch('AKIAI3VXTLI5Z4I5ZP0A'),
-      secret_access_key: ENV.fetch('Mmn4BVJPM0atr9pebZoTWc6DMC0DXW8d4M6/AZZE'),
-      s3_region: ENV.fetch('us-east-1'),
+      bucket: ENV.fetch('S3_BUCKET_NAME'),
+      access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+      secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+      s3_region: ENV.fetch('AWS_REGION'),
     }
   }
 
