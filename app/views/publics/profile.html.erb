@@ -22,7 +22,8 @@
 
       <form style="display:inline-block" action="/update_image" method="post" enctype="multipart/form-data">
           <p>Select your profile picture</p>
-          <input type="file" name="image" accept="image/*">
+          <input class="imagefile" type="file" id="file" name="image" accept="image/*">
+          <label class="btn btn-primary btn-sm" for="file">Choose File</label>
           <input class="btn btn-secondary btn-sm"type="submit" value="Update Picture">
       </form>
       <div>
