@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: tennis_matcher_production
+  database: tennis_matcher_development
   username: tennis
   password: <%= ENV['TENNIS_DATABASE_PASSWORD'] %>
