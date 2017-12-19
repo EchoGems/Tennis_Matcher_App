@@ -356,7 +356,8 @@ text-shadow: 2px 2px 0px black;
     background-position: center;
   }
 
-.btn-block {
-  width: 100px;
-  height: 60px;
+  .btn-block {
+    width: 100px;
+    height: 60px;
+  }
 }
