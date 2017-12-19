@@ -14,12 +14,12 @@ export default class About extends Component {
                   <h2 class="my-4">Our Team</h2>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center mb-4">
-                  <img class="rounded-circle img-fluid d-block mx-auto" src="../assets/austinCat.jpg" alt=""/>
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="austinCat.jpg" alt=""/>
                   <h3>Austin Gilinsky</h3>
                   <p><i>Full-Stack Web Developer</i> <br/> In his free time he enjoys spending time with his two kittens Khalessi and Khal Drogo as well as kickboxing and basketball.</p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center mb-4">
-                  <img class="rounded-circle img-fluid d-block mx-auto" src="../assets/crisCat.jpg" alt=""/>
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="crisCat.jpg" alt=""/>
                   <h3>Cris Pope</h3>
                   <p><i>Full-Stack Web Developer</i> <br/> Loves playing tennis and spending time with her cat Julieta.</p>
                 </div>
