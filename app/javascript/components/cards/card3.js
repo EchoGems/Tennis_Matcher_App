@@ -4,11 +4,8 @@ import {Nav, Navbar, NavItem, NavDropdown, Collapse, Brand, Toggle, Header, Menu
 export default class Card3 extends Component {
 
     render() {
-      var divStyle = {
-        backgroundImage:'url("assets/time.jpg")'
-      }
         return (
-          <div style={divStyle} id="card-1"className="card text-white bg-info mb-3">
+          <div id="card-3"className="card text-white bg-info mb-3">
             <div className="card-content">
               <h4 className="card-title">Schedule a Match</h4>
               <p></p>
