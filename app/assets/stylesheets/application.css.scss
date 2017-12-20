@@ -131,13 +131,13 @@ img {
 }
 
 #card-1 {
-  background-image: url(<%= asset_path 'partner.png' %>)
+  background-image: image-url("partner.png");
 }
 #card-2 {
-  background-image: url(<%= asset_path 'tenniscourt.jpg' %>)
+  background-image: image-url("tenniscourt.jpg");
 }
 #card-3 {
-  background-image: url(<%= asset_path 'time.jpg' %>)
+  background-image: image-url("time.jpg");
 }
 
 .imagefile {
