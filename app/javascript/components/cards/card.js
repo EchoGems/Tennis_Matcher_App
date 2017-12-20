@@ -3,11 +3,8 @@ import {Nav, Navbar, NavItem, NavDropdown, Collapse, Brand, Toggle, Header, Menu
 
 export default class Card extends Component {
   render() {
-    var divStyle = {
-      backgroundImage: 'url("assets/partner.jpg")'
-    }
     return (
-      <div style={divStyle} id="card-1" className="card text-white bg-info mb-3">
+      <div id="card-1" className="card text-white bg-info mb-3">
         <div className="card-content">
           <h4 className="card-title">Find a Partner</h4>
           <p></p>
