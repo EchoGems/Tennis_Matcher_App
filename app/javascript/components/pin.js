@@ -9,6 +9,7 @@ const PinStyles = {
 const TooltipStyles = {
   border: '1px solid red',
   backgroundColor: 'white',
+  color: "black",
   padding: '6px',
   position: 'absolute',
   bottom: '0px',

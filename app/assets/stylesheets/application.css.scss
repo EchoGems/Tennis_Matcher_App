@@ -85,21 +85,7 @@ img {
   color: #5bc0de;
 }
 
-.jumbotron-billboard .img {
-    margin-bottom: 0px;
-    opacity: 0.6;
-    color: #fff;
-    background-image: #000 image-url("net.jpg") top center no-repeat;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    overflow: visible;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index:1;
-}
+
 
 .jumbotron h2 {
   margin-top:0;
@@ -344,6 +330,21 @@ text-shadow: 2px 2px 0px black;
   background: #fff;
 }
 
+.jumbotron-billboard .img {
+    margin-bottom: 0px;
+    opacity: 0.6;
+    color: #fff;
+    background-image: url("net.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: visible;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
 /*--------------------------------------------------- Media Query ------*/
 
 @media screen and (max-width: 768px) {

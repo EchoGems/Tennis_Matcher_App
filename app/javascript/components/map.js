@@ -5,7 +5,7 @@ export default class Map extends React.Component {
   render() {
     return (
       <div>
-        <div class="map-title">
+        <div className={"map-title"}>
         <h2>
           SD Court locations
         </h2>
