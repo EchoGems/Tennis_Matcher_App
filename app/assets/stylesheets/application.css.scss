@@ -89,7 +89,7 @@ img {
     margin-bottom: 0px;
     opacity: 0.6;
     color: #fff;
-    background-image: #000 image('net.jpg') top center no-repeat;
+    background-image: #000 url("net.jpg") top center no-repeat;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -131,13 +131,13 @@ img {
 }
 
 #card-1 {
-  background-image: url("assets/partner.png");
+  background-image: url(<%= asset_path 'partner.png' %>)
 }
 #card-2 {
-  background-image: url("/assets/tenniscourt.jpg");
+  background-image: image-url("tenniscourt.jpg")
 }
 #card-3 {
-  background-image: url("../assets/time.jpg");
+  background-image: image-url("time.jpg")
 }
 
 .imagefile {
