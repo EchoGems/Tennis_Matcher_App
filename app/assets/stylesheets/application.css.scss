@@ -89,7 +89,7 @@ img {
     margin-bottom: 0px;
     opacity: 0.6;
     color: #fff;
-    background-image: #000 top center no-repeat;
+    background-image: #000 image-url("net.jpg") top center no-repeat;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -131,7 +131,7 @@ img {
 }
 
 #card-1 {
-  background-image: image-url("partner.png");
+  background-image: image-url("partner.jpg");
 }
 #card-2 {
   background-image: image-url("tenniscourt.jpg");
